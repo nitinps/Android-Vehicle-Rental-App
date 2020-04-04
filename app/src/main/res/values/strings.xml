@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Car Booking App Final</string>
+    <string name="dodge_charger">Dodge Charger</string>
+    <string name="rs_3000">RS 3000</string>
+    <string name="rs_1300">RS 1300</string>
+    <string name="ford_fiesta">Ford Fiesta</string>
+    <string name="rs_400">RS 400</string>
+    <string name="bentley_continental">Bentley Continental</string>
+    <string name="bmw_x3">BMW X3</string>
+    <string name="rs_800">RS 800</string>
+    <string name="range_rover_evoque">Range Rover Evoque</string>
+    <string name="rs_1500">RS 1500</string>
+    <string name="general_information_abouts_us">General Information abouts us</string>
+    <string name="title_activity_address">Select address</string>
+
 </resources>

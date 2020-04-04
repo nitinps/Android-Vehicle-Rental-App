@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/simple"
     tools:context=".StartTrip">
 
     <Button
@@ -25,35 +26,45 @@
     <EditText
         android:id="@+id/date1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="101dp"
+        android:layout_marginLeft="101dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:background="@android:color/black"
         android:ems="10"
+        android:fontFamily="@font/arbutus_slab"
         android:hint="Select trip start date"
         android:inputType="textPersonName"
+
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="101dp"
-        android:layout_marginRight="97dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/time1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="103dp"
+        android:layout_marginLeft="103dp"
         android:layout_marginTop="73dp"
         android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
         android:layout_marginBottom="80dp"
+        android:background="@android:color/black"
         android:ems="10"
+        android:fontFamily="@font/arbutus_slab"
         android:hint="Select trip start time"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date1"
-        android:layout_marginLeft="103dp"
-        android:layout_marginRight="95dp" />
+        app:layout_constraintTop_toBottomOf="@+id/date1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

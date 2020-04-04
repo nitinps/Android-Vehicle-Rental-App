@@ -66,6 +66,7 @@ public class Register extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
                 final String fullName = mFullName.getText().toString();
                 final String phone    = mPhone.getText().toString();
+                final String credit = "0";
 
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("Email is Required.");
@@ -97,6 +98,7 @@ public class Register extends AppCompatActivity {
                             user.put("fName",fullName);
                             user.put("email",email);
                             user.put("phone",phone);
+                            user.put("credits",credit);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

@@ -9,7 +9,22 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5b10671-c598-4dc6-85c6-fa8b59e72ba4" name="Default Changelist" comment="" />
+    <list default="true" id="e5b10671-c598-4dc6-85c6-fa8b59e72ba4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/Address2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/Address2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/EndTrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/EndTrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/OrderConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/OrderConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/StartTrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/StartTrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/bookyourcar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carbookingappfinal/bookyourcar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +52,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZvzOaautvXwLSjojwA3qohp6Va" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Dependencies" />
@@ -47,15 +66,15 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="N:\College\Sem 4\Android\vivek_proj\vehicle app\Android-Vehicle-Rental-App-master\app\src\main\res\drawable" />
-      <recent name="N:\College\Sem 4\Android\vivek_proj\vehicle app\Android-Vehicle-Rental-App-master\app" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.carbookingappfinal" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="N:\College\Sem 4\Android\vivek_proj\vehicle app\Android-Vehicle-Rental-App-master\app\src\main\res\drawable" />
+      <recent name="N:\College\Sem 4\Android\vivek_proj\vehicle app\Android-Vehicle-Rental-App-master\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,5 +161,16 @@
       <updated>1585734324655</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

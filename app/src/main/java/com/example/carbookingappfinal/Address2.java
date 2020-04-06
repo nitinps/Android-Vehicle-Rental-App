@@ -72,6 +72,9 @@ public class Address2 extends AppCompatActivity {
             case R.id.home_menu:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finish();
+            case R.id.contact_us:
+                startActivity(new Intent(getApplicationContext(),ContactUs.class));
+                finish();
         }
         return super.onOptionsItemSelected(item);
     }

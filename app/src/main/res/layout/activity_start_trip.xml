@@ -23,7 +23,7 @@
         android:layout_marginLeft="162dp"
         android:layout_marginRight="161dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/date1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -37,6 +37,7 @@
         android:fontFamily="@font/arbutus_slab"
         android:hint="Select trip start date"
         android:inputType="textPersonName"
+        android:gravity="center"
 
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
@@ -44,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/time1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -56,6 +57,7 @@
         android:layout_marginBottom="80dp"
         android:background="@android:color/black"
         android:ems="10"
+        android:gravity="center"
         android:fontFamily="@font/arbutus_slab"
         android:hint="Select trip start time"
         android:inputType="textPersonName"

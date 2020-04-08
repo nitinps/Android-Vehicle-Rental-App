@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/logout_menu"
+        android:title="Logout"
+        app:showAsAction="never"></item>
+    <item android:id="@+id/home_menu"
+        android:title="Home"
+        app:showAsAction="never"></item>
+    <item android:id="@+id/contact_us"
+        android:title="Contact Us"
+        app:showAsAction="never"></item>
+
+    <item android:id="@+id/orderinfo"
+        android:title="Order Info"
+        app:showAsAction="never"></item>
+</menu>

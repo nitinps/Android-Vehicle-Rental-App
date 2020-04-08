@@ -28,6 +28,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ import javax.annotation.Nullable;
 public class StartTrip extends AppCompatActivity
 {
 
-    private EditText d1,t1;
+    private TextView d1,t1;
     private Context _context=this;
     String time,userId;
     String date;
@@ -53,15 +54,40 @@ public class StartTrip extends AppCompatActivity
         t1= findViewById(R.id.time1);
         userId = fAuth.getCurrentUser().getUid();
 
-        d1.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy.HH.mm");
+        String cur = sdf.format(new Date());
+        //Toast.makeText(StartTrip.this, cur , Toast.LENGTH_SHORT).show();
+        final String[] curr = cur.split("\\.", 5);
+        Log.i("myinfo", curr[0]);
+
+        d1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus) {
+            public void onClick(View v) {
                     DatePickerDialog dialog = new DatePickerDialog(_context, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                            date = dayOfMonth + "/" + (month + 1) + "/" + year;
-                            d1.setText(date);
+                            if((Integer.parseInt(curr[2])==year && Integer.parseInt(curr[1])< month+1) ||
+                                    (Integer.parseInt(curr[2])==year && Integer.parseInt(curr[1])== month+1 && Integer.parseInt(curr[0])<dayOfMonth )){
+                                date = dayOfMonth + "/" + (month + 1) + "/" + year;
+                                d1.setText(date);
+                            }
+                            else{
+                                Toast.makeText(StartTrip.this, "Select a date which is after 12 am today! " , Toast.LENGTH_SHORT).show();
+                            }
+                            //Toast.makeText(StartTrip.this, String.valueOf(year) , Toast.LENGTH_SHORT).show();
+                            /*if(Integer.parseInt(curr[2])>year){
+                                Toast.makeText(StartTrip.this, "Don't select a date in the past" , Toast.LENGTH_SHORT).show();
+                            }
+                            else if(Integer.parseInt(curr[1])>month ){
+                                Toast.makeText(StartTrip.this, "Don't select a date in the past" , Toast.LENGTH_SHORT).show();
+                            }
+                            else if (Integer.parseInt(curr[0])>dayOfMonth ){
+                                Toast.makeText(StartTrip.this, "Don't select a date in the past" , Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                date = dayOfMonth + "/" + (month + 1) + "/" + year;
+                                d1.setText(date);
+                            }*/
                         }
                     }, Calendar.getInstance().get(Calendar.YEAR),
                             Calendar.getInstance().get(Calendar.MONTH),
@@ -69,13 +95,11 @@ public class StartTrip extends AppCompatActivity
 
                     dialog.show();
                 }
-            }
         });
 
-        findViewById(R.id.time1).setOnFocusChangeListener(new View.OnFocusChangeListener(){
+        t1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
+            public void onClick(View v) {
                     TimePickerDialog tdialog = new TimePickerDialog(_context, new TimePickerDialog.OnTimeSetListener() {
                         @Override
                         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -90,7 +114,6 @@ public class StartTrip extends AppCompatActivity
                             true);
                     tdialog.show();
                 }
-            }
         });
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {

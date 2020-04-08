@@ -13,4 +13,10 @@
     <string name="general_information_abouts_us">General Information abouts us</string>
     <string name="title_activity_address">Select address</string>
 
-</resources>
+        <string name="appp_name">Car Booking App Final</string>
+        <string name="forgot_password">Forgot Password ?</string>
+    </resources>
+
+
+
+

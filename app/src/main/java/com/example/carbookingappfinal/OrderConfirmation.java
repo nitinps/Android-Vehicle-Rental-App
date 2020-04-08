@@ -80,7 +80,6 @@ public class OrderConfirmation extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
         CreditsDialog exampleDialog = new CreditsDialog();
         exampleDialog.show(getSupportFragmentManager(), "Dialog");
     }

@@ -2,7 +2,12 @@ package com.example.carbookingappfinal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,6 +32,9 @@ import org.w3c.dom.Document;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Register extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText mFullName,mEmail,mPassword,mPhone;
@@ -83,6 +91,17 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
+                if (phone.length()!=10){
+                    mPhone.setError("Phone number must be 10 digits");
+                    return;
+                }
+                Pattern p = Pattern.compile("[0-9]+");
+                Matcher m = p.matcher(phone);
+                if (!m.find()){
+                    mPhone.setError("Phone number must be digits only");
+                    return;
+                }
+
                 progressBar.setVisibility(View.VISIBLE);
 
                 // register the user in firebase
@@ -110,6 +129,7 @@ public class Register extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
+
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                         }else {

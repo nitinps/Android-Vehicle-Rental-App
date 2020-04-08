@@ -110,6 +110,9 @@ public class Payment extends AppCompatActivity {
                 else if(!m.find()){
                     Toast.makeText(Payment.this, "Please enter numbers only" , Toast.LENGTH_SHORT).show();
                 }
+                else if(carddetails.getText().length()!=16){
+                    Toast.makeText(Payment.this, "Please enter 16 digit card number" , Toast.LENGTH_SHORT).show();
+                }
                 else {
                     DocumentReference documentReference1 = fStore.collection("users").document(userId);
                     Map<String, Object> user = new HashMap<>();

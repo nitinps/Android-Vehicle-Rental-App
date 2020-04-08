@@ -7,7 +7,7 @@
     android:background="@drawable/simple"
     tools:context=".EndTrip">
 
-    <EditText
+    <TextView
         android:id="@+id/date2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -19,33 +19,36 @@
         android:background="@android:color/black"
         android:ems="10"
         android:fontFamily="@font/arbutus_slab"
+        android:gravity="center"
         android:hint="Select trip end date"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/time2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginLeft="103dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginRight="95dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginRight="114dp"
         android:background="@android:color/black"
         android:ems="10"
         android:fontFamily="@font/arbutus_slab"
+
+        android:gravity="center"
         android:hint="Select trip end time"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date2" />
 

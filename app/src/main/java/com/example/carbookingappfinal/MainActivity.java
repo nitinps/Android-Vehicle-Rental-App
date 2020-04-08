@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -64,5 +67,30 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();//logout
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu2, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout_menu:
+                FirebaseAuth.getInstance().signOut();//logout
+                startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
+            case R.id.home_menu:
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
+            case R.id.contact_us:
+                startActivity(new Intent(getApplicationContext(),ContactUs.class));
+                finish();
+            case R.id.orderinfo:
+                startActivity(new Intent(getApplicationContext(),OrderConfirmation.class));
+                finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

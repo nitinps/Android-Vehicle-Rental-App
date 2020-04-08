@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/simple">
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -35,7 +33,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.13"
+
+        android:textColor="#FFEB3B"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/arbutus_slab"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -57,7 +59,10 @@
         android:text="Your Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/arbutus_slab"/>
 
     <TextView
         android:id="@+id/profileEmail"
@@ -69,7 +74,10 @@
         android:text="Your Email Address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/profileName" />
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/arbutus_slab"/>
 
     <TextView
         android:id="@+id/profilePhone"
@@ -81,7 +89,10 @@
         android:text="Phone Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/profileEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/arbutus_slab"/>
 
     <Button
         android:id="@+id/bookbutton"
@@ -100,4 +111,3 @@
         app:layout_constraintTop_toBottomOf="@+id/profilePhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.drawerlayout.widget.DrawerLayout>

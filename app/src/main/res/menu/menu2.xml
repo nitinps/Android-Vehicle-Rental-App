@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/logout_menu"
+    <item android:id="@+id/logout_menu1"
         android:title="Logout"
         app:showAsAction="never"></item>
-    <item android:id="@+id/home_menu"
+    <item android:id="@+id/home_menu1"
         android:title="Home"
         app:showAsAction="never"></item>
-    <item android:id="@+id/contact_us"
+    <item android:id="@+id/contact_us1"
         android:title="Contact Us"
         app:showAsAction="never"></item>
-
-    <item android:id="@+id/orderinfo"
+    <item android:id="@+id/orderinfo1"
         android:title="Order Info"
         app:showAsAction="never"></item>
+
 </menu>

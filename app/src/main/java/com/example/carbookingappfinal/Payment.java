@@ -1,7 +1,11 @@
 package com.example.carbookingappfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -41,6 +45,8 @@ public class Payment extends AppCompatActivity {
     public String userId,credits,total1;
     int crd,tot,realtot,cred;
     Button pay;
+    //private final String CHANNEL_ID ="personal notifications";
+    private final int NOTIFICATION_ID=001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +125,28 @@ public class Payment extends AppCompatActivity {
                     user.put("credits", Integer.toString(crd + 50));
                     user.put("carddetails", carddetails.getText().toString());
                     documentReference1.update(user);
+
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                        String CHANNEL_ID = "my_channel_01";
+                        CharSequence name = "my_channel";
+                        String Description = "This is my channel";
+                        int importance = NotificationManager.IMPORTANCE_HIGH;
+                        NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+                        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+                        mChannel.setDescription(Description);
+                        mChannel.enableLights(true);
+                        mChannel.setShowBadge(false);
+                        notificationManager.createNotificationChannel(mChannel);
+                    }
+                    NotificationCompat.Builder builder= new NotificationCompat.Builder(Payment.this,"my_channel_01")
+                            .setSmallIcon(R.drawable.ic_car)
+                            .setContentTitle("Congrats!")
+                            .setContentText("You've earned credits worth Rs.50 on this booking")
+                            .setAutoCancel(true);
+
+                    NotificationManagerCompat notificationManagerCompat=NotificationManagerCompat.from(Payment.this);
+                    notificationManagerCompat.notify(0,builder.build());
+
                     Intent intent = new Intent(getApplicationContext(), OrderConfirmation.class);
                     startActivity(intent);
                 }
@@ -139,13 +167,13 @@ public class Payment extends AppCompatActivity {
             case R.id.logout_menu:
                 FirebaseAuth.getInstance().signOut();//logout
                 startActivity(new Intent(getApplicationContext(),Login.class));
-                finish();
+                finish();return true;
             case R.id.home_menu:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
+                finish();return true;
             case R.id.contact_us:
                 startActivity(new Intent(getApplicationContext(),ContactUs.class));
-                finish();
+                finish();return true;
         }
         return super.onOptionsItemSelected(item);
     }

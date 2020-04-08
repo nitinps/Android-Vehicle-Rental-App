@@ -81,9 +81,11 @@ public class ContactUs extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();//logout
                 startActivity(new Intent(getApplicationContext(),Login.class));
                 finish();
+                return true;
             case R.id.home_menu:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finish();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

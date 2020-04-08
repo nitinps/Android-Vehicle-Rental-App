@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu2, menu);
@@ -77,19 +78,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.logout_menu:
+            case R.id.logout_menu1:
                 FirebaseAuth.getInstance().signOut();//logout
                 startActivity(new Intent(getApplicationContext(),Login.class));
                 finish();
-            case R.id.home_menu:
+                return true;
+            case R.id.home_menu1:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
-            case R.id.contact_us:
+                finish();return true;
+            case R.id.contact_us1:
                 startActivity(new Intent(getApplicationContext(),ContactUs.class));
-                finish();
-            case R.id.orderinfo:
+                finish();return true;
+            case R.id.orderinfo1:
                 startActivity(new Intent(getApplicationContext(),OrderConfirmation.class));
-                finish();
+                finish();return true;
         }
         return super.onOptionsItemSelected(item);
     }

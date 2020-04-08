@@ -100,13 +100,13 @@ public class bookyourcar extends AppCompatActivity {
             case R.id.logout_menu:
                 FirebaseAuth.getInstance().signOut();//logout
                 startActivity(new Intent(getApplicationContext(),Login.class));
-                finish();
+                finish();return true;
             case R.id.home_menu:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
+                finish();return true;
             case R.id.contact_us:
                 startActivity(new Intent(getApplicationContext(),ContactUs.class));
-                finish();
+                finish();return true;
         }
         return super.onOptionsItemSelected(item);
     }

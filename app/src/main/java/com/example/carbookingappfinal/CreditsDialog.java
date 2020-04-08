@@ -13,8 +13,8 @@ public class CreditsDialog extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Payment Successful!")
-                .setMessage("You've earned credits worth Rs.50 on this booking")
+        builder.setTitle("Thank You!")
+                .setMessage("Please visit us soon!")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
